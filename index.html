@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>The World's Billionaires | FIT3179 - Homework</title>
+  <title>The World's Billionaires | FIT3179 - Assignment</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -31,7 +31,7 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>The world's Billionaires</h1>
+        <img src="header.jpg" alt="HTML5 Icon" style="width: 1024px;height:600px;">
         <p>Based on the Forbes' Billionaire List of 2021, this dashboard explores some statistics abouut the world's wealthiest people</p>
       </div>
     </div>
@@ -43,13 +43,13 @@
                   <h2>Which countries have the most Billionaires?</h2>
                   <p>The spread of the world's Billionaires spans all across the globe. This visualisation looks at the spread and concentration of Billionaires across the different 
                     countries and continents. Countries with a higher number of Billionaires are represented by a greater concentration of green. Currently the top 2 countries are China and the United States.
-                    North America currently has the most Billionaires. 
+                    North America currently has the most Billionaires. A better representation of each continent and their countries can be shown with the zoom and continent dropdown feature. 
 
                   </p>
                 </div>
             <!-- pure grid group (viz) -->
             </div>
-              <div class="pure-u-1-1" style="width: 40%;">
+              <div class="pure-u-1-1" style="width: 20%;">
                 <div id="vis1" class="vis-container" style="margin-left: 0px;"></div>
               </div>
             </div>
@@ -66,11 +66,32 @@
             </div>
         <!-- pure grid group (viz) -->
         </div>
-          <div class="pure-u-1-1" style="width: 40%;">
+          <div class="pure-u-1-1" style="width: 20%;">
             <div id="vis2" class="vis-container" style="margin-left: 0px;"></div>
           </div>
         </div>
         <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+          <div class="pure-u-2-3">
+            <div id="vis3" class="vis-container"></div>
+          </div>
+          <div class="pure-u-1-3">
+            <div class="description description-right">
+              <h2>Which industries produce the most Billionaires?</h2>
+              <p>The visualisation to the left showcases the number of Billionaires in each industry. Finance & Investments still produces the most Billionaires but the dominance of 
+                technology puts it in second place and it would be interesting to see if it can overtake the finance industry in the future. Manufacturing comes it at 3rd place. The industry 
+                "Diversified" represents individuals who get their net worth from multiple industries. For example, Charles Koch who is the CEO of  Koch Industries which has subsidiaries in 
+                manufacturing, cloud computing, finance, petroleum, chemicals and many more. 
+              </p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Charles_Koch_Portrait.jpg" alt="Charles Koch Portrait" style="width:280.8px;height:410.4px;">
+              <figcaption>Charles Koch Portrait (Wikipedia)</figcaption>
+            </div>
+          </div>
+          <!-- end pure grid group -->
+    
+        </div>
     
 
        
@@ -79,6 +100,7 @@
   <script type="text/javascript">
     var specVis1 = "./js/hw3.vg.json";
     var specVis2 = "./js/hw4.vg.json";
+    var specVis3 = "./js/asgn2.vg.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
@@ -86,7 +108,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
