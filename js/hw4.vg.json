@@ -40,11 +40,22 @@
         "axis": {"tickCount": 10},
         "scale": {"type": "log", "domain": [1, 20]}
       }
+      
     },
     "layer": [
       {
         "mark": "circle",
         "encoding": {
+          "color": {
+            "field": "CountofName",
+            "title": "Count of Billionaire",
+            "type": "quantitative",
+            "scale": {
+                "type": "log", 
+                "scheme": "greens"
+                
+                }
+          },
           "size": {
             "field": "CountofName",
             "title": "Count of Billionaire",
