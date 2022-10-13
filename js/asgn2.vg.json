@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 650,
+    "title": { "text": "Industries with the most Billionaires" },
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/BinaryTwee/FIT3179-ASGN2/main/data/BillionaireBar.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+    "x": { "field": "Count", "type": "quantitative"},
+    "y": { "field": "Industry", "type": "nominal"}, 
+    "color": {
+        "field": "Count",
+        "type": "quantitative",
+        "scale": {
+            "type": "linear", 
+            "scheme": "teals"
+            
+            }
+      }, 
+    "tooltip": [
+        {"field": "Industry", "type": "nominal", "title": "Industry"},
+        {"field": "Count", "type": "quantitative", "title": "Number of Billionaires"}
+      ]
+    }
+    }
