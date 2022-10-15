@@ -10,7 +10,7 @@
     "mark": "bar",
     "encoding": {
     "x": { "field": "Count", "type": "quantitative"},
-    "y": { "field": "Industry", "type": "nominal"}, 
+    "y": { "field": "Industry", "type": "nominal", "sort": {"op": "sum", "field": "Count"}}, 
     "color": {
         "field": "Count",
         "type": "quantitative",
