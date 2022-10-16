@@ -9,7 +9,7 @@
     },
     "mark": "bar",
     "encoding": {
-    "x": { "field": "Count", "type": "quantitative"},
+    "x": { "field": "Count", "type": "quantitative",  "title": "Number of Billionaires"},
     "y": { "field": "Industry", "type": "nominal", "sort": {"op": "sum", "field": "Count"}}, 
     "color": {
         "field": "Count",
